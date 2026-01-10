@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 style="color: white;">Your Notes</h2>
+
+<div class="notes-grid">
+    {% for note in notes %}
+    <div class="card">
+        <small style="color: green;">{{ note[3] }}</small>
+        <h3>{{ note[1] }}</h3>
+        <p>{{ note[2] | replace('\n', '<br>') | safe }}</p>
+
+
+        <div class="actions">
+    <a href="/view/{{ note[0] }}" style="text-decoration: none;">👁️</a>
+    <a href="/edit/{{ note[0] }}" class="icon-btn edit"><i class="fa-solid fa-pen-to-square" style="color: cyan;"></i></a>
+    <a href="/delete/{{ note[0] }}" class="icon-btn delete"><i class="fa-solid fa-trash" style="color: darkred;"></i></a>
+</div>
+
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
