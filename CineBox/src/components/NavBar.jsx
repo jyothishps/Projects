@@ -87,7 +87,7 @@ function NavBar() {
           {/* Logo */}
           <Link to="/home" className="flex items-center">
             <span className="text-purple-500 font-bold text-3xl">
-              Cine<span className="text-white">Box</span>
+              Cine<span className="text-white">Grid</span>
             </span>
           </Link>
 
