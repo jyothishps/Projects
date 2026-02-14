@@ -1,0 +1,2 @@
+javac MemoryGame.java Card.java
+java MemoryGame
